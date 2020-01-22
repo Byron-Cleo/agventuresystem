@@ -1,0 +1,25 @@
+    {% extends "./trucks_home_page.html" %}
+
+
+    {% block app_navigation %}
+    <nav class="nav">
+        <ul class="nav_ul">
+                <li class="nav_li">
+                    <a href="{% url 'trucks:trucks_home' %}">BACK to Trucks Page</a>
+                </li>
+                <li class="nav_li">
+                    <a href="{% url 'trucks:truck_list' %}">All AGV Trucks</a>
+                </li>
+        </ul>
+    </nav>
+    {% endblock %}
+
+
+
+    {% block content %}
+    <h3>UPDATE TrUCK (TRUCK UPDATE PAGE)</h3>
+    <form action="" method="post"> {% csrf_token %}
+        {{ truck_update_form.as_p}}
+        <input type="submit" value="UPDATE TRUCK">
+    </form>
+    {% endblock %}

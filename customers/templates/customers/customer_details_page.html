@@ -1,0 +1,85 @@
+    {% extends "./customers_home_page.html" %}
+
+
+    {% block app_navigation %}
+    <nav class="nav">
+        <ul class="nav_ul">
+                <li class="nav_li">
+                    <a href="{% url 'customers:customers_home' %}">BACK to CUSTOMER Home Page IN SALES PLATFORM</a>
+                </li>
+                <li class="nav_li">
+                    <a href="{% url 'customers:customers_list' %}">All AGV Customers</a>
+                </li>
+        </ul>
+    </nav>
+    {% endblock %}
+
+
+
+    {% block content %}
+
+     <h3>All Customer Details/(PROPERTIES/ATTRIBUTES OF THE CUSTOMERS CLASS)</h3>
+
+    User: {{ request.user }}
+
+<div style="width: 35rem;">
+
+    <div style="display: flex; background-color: greenyellow; margin-bottom: 2rem;">
+    <h3>Name of the Customer:</h3>
+    <p style="align-self: center; margin: 1rem;">{{ customer.name }}</p>
+    </div>
+
+    <div style="display: flex; background-color: greenyellow; margin-bottom: 2rem;">
+    <h3>Customer Type:</h3>
+    <p style="align-self: center; margin: 1rem;">{{ customer.type }}</p>
+    </div>
+
+    <div style="display: flex; background-color: greenyellow;  margin-bottom: 2rem;">
+    <h3>Customer Category:</h3>
+    <p style="align-self: center; margin: 1rem;">{{ customer.category }}</p>
+    </div>
+
+    <div style="display: flex; background-color: greenyellow;  margin-bottom: 2rem;">
+    <h3>Customer Department:</h3>
+    <p style="align-self: center; margin: 1rem;">{{ customer.department }}</p>
+    </div>
+
+    <div style="display: flex; background-color: greenyellow;  margin-bottom: 2rem;">
+    <h3>Customer Payment Terms:</h3>
+    <p style="align-self: center; margin: 1rem;">{{ customer.payment_terms }}</p>
+    </div>
+
+    <div style="display: flex; background-color: greenyellow;  margin-bottom: 2rem;">
+    <h3>Customer Currency:</h3>
+    <p style="align-self: center; margin: 1rem;">{{ customer.currency }}</p>
+    </div>
+
+    <div style="display: flex; background-color: greenyellow;  margin-bottom: 2rem;">
+    <h3>Customer Category:</h3>
+    <p style="align-self: center; margin: 1rem;">{{ customer.category }}</p>
+    </div>
+
+    <div style="display: flex; background-color: greenyellow;  margin-bottom: 2rem;">
+    <h3>Customer Reg No.:</h3>
+    <p style="align-self: center; margin: 1rem;">{{ customer.reg_no }}</p>
+    </div>
+
+    <div style="display: flex; background-color: greenyellow;  margin-bottom: 2rem;">
+    <h3>Customer Vat No.:</h3>
+    <p style="align-self: center; margin: 1rem;">{{ customer.vat_reg }}</p>
+    </div>
+
+    <div style="display: flex; background-color: greenyellow; margin-bottom: 2rem;">
+    <h3>Customer Added By:</h3>
+    <p style="align-self: center; margin: 1rem;">{{ customer.added_by }}</p>
+    </div>
+
+    <div style="display: flex; background-color: greenyellow; margin-bottom: 2rem;">
+    <h3>Customer Updated By:</h3>
+    <p style="align-self: center; margin: 1rem;">{{ customer.updated_by }}</p>
+    </div>
+
+    <div><a href="{% url 'customers:customer_update' customer.id %}">UPDATE CROP STOCK </a></div>
+</div>
+
+    {% endblock %}

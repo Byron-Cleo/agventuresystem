@@ -1,0 +1,13 @@
+    <nav class="nav">
+        <ul class="nav_ul">
+                <li class="nav_li">
+                    <a href="{% url 'farms:farm_home' %}">Farm Home Page</a>
+                </li>
+        </ul>
+    </nav>
+
+
+<form action="" method="post"> {% csrf_token %}
+    {{ form.as_p}}
+    <input type="submit" value="UPDATE FARM">
+</form>

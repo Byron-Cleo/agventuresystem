@@ -1,0 +1,25 @@
+    {% extends "./crop_stocks_home_page.html" %}
+
+
+    {% block app_navigation %}
+    <nav class="nav">
+        <ul class="nav_ul">
+                <li class="nav_li">
+                    <a href="{% url 'crop_stocks:crop_stock_home' %}">BACK to Crop Stock Home Page</a>
+                </li>
+                <li class="nav_li">
+                    <a href="{% url 'crop_stocks:crops_stock_list' %}">All Farms' Crop Stocks</a>
+                </li>
+        </ul>
+    </nav>
+    {% endblock %}
+
+
+
+    {% block content %}
+    <h3>UPDATE Crop Stock (CROP STOCK UPDATE PAGE)</h3>
+    <form action="" method="post"> {% csrf_token %}
+        {{ crop_stock_update_form.as_p}}
+        <input type="submit" value="UPDATE CROP STOCK">
+    </form>
+    {% endblock %}

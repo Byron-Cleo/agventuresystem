@@ -1,0 +1,28 @@
+    {% extends "./sample_requests_home_page.html" %}
+
+
+    {% block app_navigation %}
+    <nav class="nav">
+        <ul class="nav_ul">
+                <li class="nav_li">
+                    <a href="{% url 'sample_requests:sample_requests_home' %}">BACK to Sample Requests HomePage</a>
+                </li>
+                <li class="nav_li">
+                    <a href="{% url 'sample_requests:sample_requests_list' %}">All Sample Requests</a>
+                </li>
+        </ul>
+    </nav>
+    {% endblock %}
+
+
+
+    {% block content %}
+
+    <h3>UPDATE Sample Request (SAMPLE REQUEST UPDATE PAGE)</h3>
+
+    <form action="" method="post"> {% csrf_token %}
+        {{ sample_request_update_form.as_p}}
+        <input type="submit" value="UPDATE REQUEST">
+    </form>
+
+    {% endblock %}

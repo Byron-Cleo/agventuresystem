@@ -1,0 +1,107 @@
+    {% extends "./customer_interests_home_page.html" %}
+
+
+    {% block app_navigation %}
+    <nav class="nav">
+        <ul class="nav_ul">
+                <li class="nav_li">
+                    <a href="{% url 'customer_interests:home_customer_interest' %}">BACK to Customer Interests Home Page</a>
+                </li>
+                <li class="nav_li">
+                    <a href="{% url 'customer_interests:customer_interests_list' %}">All Customer Interests</a>
+                </li>
+        </ul>
+    </nav>
+    {% endblock %}
+
+
+
+    {% block content %}
+
+     <h3>All Customer Interests Details/(PROPERTIES/ATTRIBUTES OF THE Customer Interests cLASS)</h3>
+
+    User: {{ request.user }}
+
+<div style="width: 35rem;">
+
+    <div style="display: flex; background-color: greenyellow; margin-bottom: 2rem;">
+    <h3>Name of the Customer Making Request:</h3>
+    <p style="align-self: center; margin: 1rem;">{{ customer_interest.customer }}</p>
+    </div>
+
+    <div style="display: flex; background-color: greenyellow; margin-bottom: 2rem;">
+    <h3>Crop Ordered:</h3>
+    <p style="align-self: center; margin: 1rem;">{{ customer_interest.crop }}</p>
+    </div>
+
+    <div style="display: flex; background-color: greenyellow;  margin-bottom: 2rem;">
+    <h3>Order Type:</h3>
+    <p style="align-self: center; margin: 1rem;">{{ customer_interest.order_type }}</p>
+    </div>
+
+    <div style="display: flex; background-color: greenyellow;  margin-bottom: 2rem;">
+    <h3>Bag Type of Interest:</h3>
+    <p style="align-self: center; margin: 1rem;">{{ customer_interest.bag_type }}</p>
+    </div>
+
+    <div style="display: flex; background-color: greenyellow;  margin-bottom: 2rem;">
+    <h3>Ordered Max. Quantity (KGs):</h3>
+    <p style="align-self: center; margin: 1rem;">{{ customer_interest.ordered_quantity }}</p>
+    </div>
+
+    <div style="display: flex; background-color: greenyellow;  margin-bottom: 2rem;">
+    <h3>Customer Awarded Price/KG (KSH)</h3>
+    <p style="align-self: center; margin: 1rem;">{{ customer_interest.cust_kg_price }}</p>
+    </div>
+
+    <div style="display: flex; background-color: greenyellow;  margin-bottom: 2rem;">
+    <h3>AGV-Cust. Agreed Bag Cost(KSH):</h3>
+    <p style="align-self: center; margin: 1rem;">{{ customer_interest.cust_bag_price }}</p>
+    </div>
+
+    <div style="display: flex; background-color: greenyellow;  margin-bottom: 2rem;">
+    <h3>Farm Cost/Bag(KSh) (KSH.):</h3>
+    <p style="align-self: center; margin: 1rem;">{{ customer_interest.farm_kg_price }}</p>
+    </div>
+
+
+
+    <div style="display: flex; background-color: greenyellow;  margin-bottom: 2rem;">
+    <h3>Farm Expected Bag Cost(KSH)</h3>
+    <p style="align-self: center; margin: 1rem;">{{ customer_interest.farm_bag_price }}</p>
+    </div>
+
+    <div style="display: flex; background-color: greenyellow;  margin-bottom: 2rem;">
+    <h3>Total Bags:</h3>
+    <p style="align-self: center; margin: 1rem;">{{ customer_interest.total_bags }}</p>
+    </div>
+
+    <div style="display: flex; background-color: greenyellow;  margin-bottom: 2rem;">
+    <h3>Farm Approval:</h3>
+    <p style="align-self: center; margin: 1rem;">{{ customer_interest.farm_approval }}</p>
+    </div>
+
+    <div style="display: flex; background-color: greenyellow;  margin-bottom: 2rem;">
+    <h3>Customer Delivery Destination:</h3>
+    <p style="align-self: center; margin: 1rem;">{{ customer_interest.cust_dest }}</p>
+    </div>
+
+    <div style="display: flex; background-color: greenyellow;  margin-bottom: 2rem;">
+    <h3>Farm of Collection:</h3>
+    <p style="align-self: center; margin: 1rem;">{{ customer_interest.farm }}</p>
+    </div>
+
+    <div style="display: flex; background-color: greenyellow; margin-bottom: 2rem;">
+    <h3>Customer Interest Added By:</h3>
+    <p style="align-self: center; margin: 1rem;">{{ customer_interest.added_by }}</p>
+    </div>
+
+    <div style="display: flex; background-color: greenyellow; margin-bottom: 2rem;">
+    <h3>Customer Interest Updated By:</h3>
+    <p style="align-self: center; margin: 1rem;">{{ customer_interest.updated_by }}</p>
+    </div>
+
+    <div><a href="{% url 'customer_interests:customer_interest_update' customer_interest.id %}">UPDATE CROP STOCK </a></div>
+</div>
+
+    {% endblock %}

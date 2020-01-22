@@ -1,0 +1,32 @@
+    {% extends "./farm_contracts_home_page.html" %}
+
+
+    {% block app_navigation %}
+    <nav class="nav">
+        <ul class="nav_ul">
+                <li class="nav_li">
+                    <a href="{% url 'farm_contracts:farm_contact_home' %}">BACK to Farm Contract -SALES PLATFORM</a>
+                </li>
+        </ul>
+    </nav>
+    {% endblock %}
+
+
+
+    {% block content %}
+
+    <h3>All AGV Farm Contracts</h3>
+
+    {% if farm_contracts %}
+    <ul style="width: 35rem;">
+        {% for farm_contract in farm_contracts %}
+        <li style="display: flex; background-color: greenyellow; margin-bottom: 2rem;">
+            <a style="margin: .5rem;" href="{{ farm_contract.get_absolute_url }}">{{ farm_contract.buyer }}</a>
+        </li>
+        {% endfor %}
+    </ul>
+    {% else %}
+    <h3>No Farm Contract Generated Yet</h3>
+    {% endif %}
+
+    {% endblock %}

@@ -1,0 +1,48 @@
+{% extends "base.html" %}
+
+{% block base_title %} <title>Trans. & Logistics</title>{% endblock %}
+
+{% block content %}
+
+<h1>This is Transport and Logistics Platform</h1>
+
+<nav class="nav">
+        <ul class="nav_ul">
+<!--                <li class="nav_li">-->
+<!--                    <a href="{% url 'crop_stocks:crops_stock_list' %}">Customer Payments</a>-->
+<!--                </li>-->
+<!--                <li class="nav_li">-->
+<!--                    <a href="{{ user_management_url }}">Barley Transport Contracts</a>-->
+<!--                </li>-->
+<!--                <li class="nav_li">-->
+<!--                    <a href="{% url 'customer_interests:home_customer_interest' %}">Crops Transport contract</a>-->
+<!--                </li>-->
+<!--                <li class="nav_li">-->
+<!--                    <a href="{% url 'customer_contracts:home_customer_contact' %}">Generated Loading Orders</a>-->
+<!--                </li>-->
+<!--                <li class="nav_li">-->
+<!--                    <a href="{% url 'farm_contracts:farm_contact_home' %}">Crop's Distance Charges</a>-->
+<!--                </li>-->
+
+<!--                <li class="nav_li">-->
+<!--                    <a href="{{ agv_accounting_platform_url }}">Barley Trans. Rates</a>-->
+<!--                </li>-->
+                <li class="nav_li">
+                    <a href="{% url 'transporters:transporters_home' %}">All AGV Transporters</a>
+                </li>
+                 <li class="nav_li">
+                    <a href="{% url 'drivers:drivers_home' %}">All Trans' Drivers</a>
+                </li>
+                <li class="nav_li">
+                    <a href="{% url 'trucks:trucks_home' %}">All Trans' Trucks</a>
+                </li>
+                <li class="nav_li">
+                    <a href="{% url 'trailers:trailers_home' %}">All Trans' Trailers</a>
+                </li>
+<!--                <li class="nav_li">-->
+<!--                    <a href="{{ agv_accounting_platform_url }}">All Trans' Address</a>-->
+<!--                </li>-->
+        </ul>
+
+    </nav>
+{% endblock %}

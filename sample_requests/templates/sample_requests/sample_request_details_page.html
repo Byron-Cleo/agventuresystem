@@ -1,0 +1,65 @@
+     {% extends "./sample_requests_home_page.html" %}
+
+
+    {% block app_navigation %}
+    <nav class="nav">
+        <ul class="nav_ul">
+                <li class="nav_li">
+                    <a href="{% url 'sample_requests:sample_requests_home' %}">BACK to Sample Requests HomePage</a>
+                </li>
+                <li class="nav_li">
+                    <a href="{% url 'sample_requests:sample_requests_list' %}">All Sample Requests</a>
+                </li>
+        </ul>
+    </nav>
+    {% endblock %}
+
+
+
+    {% block content %}
+
+     <h3>All Sample Request Details/(PROPERTIES/ATTRIBUTES OF THE Sample Request Table)</h3>
+
+    User: {{ request.user }}
+
+<div style="width: 35rem;">
+
+    <div style="display: flex; background-color: greenyellow; margin-bottom: 2rem;">
+    <h3>Name yoyote:</h3>
+    <p style="align-self: center; margin: 1rem;">{{ sample_request_obj.name }}</p>
+    </div>
+
+    <div style="display: flex; background-color: greenyellow; margin-bottom: 2rem;">
+    <h3>Crop Requested:</h3>
+    <p style="align-self: center; margin: 1rem;">{{ sample_request_obj.crop_requested }}</p>
+    </div>
+
+    <div style="display: flex; background-color: greenyellow;  margin-bottom: 2rem;">
+    <h3>Crop Quantity:</h3>
+    <p style="align-self: center; margin: 1rem;">{{ sample_request_obj.sample_quantity }}</p>
+    </div>
+
+    <div style="display: flex; background-color: greenyellow;  margin-bottom: 2rem;">
+    <h3>Crop \Deli. Destination:</h3>
+    <p style="align-self: center; margin: 1rem;">{{ sample_request_obj.delivery_destination }}</p>
+    </div>
+
+    <div style="display: flex; background-color: greenyellow;  margin-bottom: 2rem;">
+    <h3>Crop Request Status:</h3>
+    <p style="align-self: center; margin: 1rem;">{{ sample_request_obj.request_status }}</p>
+    </div>
+
+    <div style="display: flex; background-color: greenyellow; margin-bottom: 2rem;">
+    <h3>Crop Added By:</h3>
+    <p style="align-self: center; margin: 1rem;">{{ sample_request_obj.added_by }}</p>
+    </div>
+
+    <div style="display: flex; background-color: greenyellow; margin-bottom: 2rem;">
+    <h3>Crop Updated By:</h3>
+    <p style="align-self: center; margin: 1rem;">{{ sample_request_obj.updated_by }}</p>
+    </div>
+
+    <div><a href="{% url 'sample_requests:sample_request_update' sample_request_obj.id %}">UPDATE SAMPLE REQUEST </a></div>
+</div>
+
+    {% endblock %}

@@ -1,0 +1,38 @@
+{% extends "base.html" %}
+
+{% block base_title %} <title>Farms Platform </title>{% endblock %}
+
+{% block content %}
+
+<h1>Farms Platform</h1>
+
+<nav class="nav">
+        <ul class="nav_ul">
+                <li class="nav_li">
+                    <a href="{% url 'crop_stocks:crop_stock_home' %}">Crops Stock</a>
+                </li>
+                <li class="nav_li">
+                    <a href="{{ user_management_url }}">Sample Requests and Results</a>
+                </li>
+                <li class="nav_li">
+                    <a href="{{ sample_quality_url }}">Customer Order App/Disapp</a>
+                </li>
+                <li class="nav_li">
+                    <a href="{{ sales_platform_url }}">Farm-AGV Contracts</a>
+                </li>
+                <li class="nav_li">
+                    <a href="{{ transport_logistics_url }}">Farm Loading Orders</a>
+                </li>
+                <li class="nav_li">
+                    <a href="{{ agv_accounting_platform_url }}">Farm Weightbridge Tickets</a>
+                </li>
+                <li class="nav_li">
+                    <a href="{{ agv_accounting_platform_url }}">Farm Crop Payments</a>
+                </li>
+        </ul>
+    </nav>
+
+{% endblock %}
+
+
+

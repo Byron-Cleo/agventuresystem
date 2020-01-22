@@ -1,0 +1,34 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    {% block base_title %} <title>Sample Requests Home Page</title>{% endblock %}
+</head>
+<body>
+
+    {% block app_navigation %}
+    <nav class="nav">
+        <ul class="nav_ul">
+                <li class="nav_li">
+                    <a href="{% url 'sample_quality' %}">BACK SAMPLE & QUALITY CONTROL</a>
+                </li>
+                <li class="nav_li">
+                    <a href="{% url 'sample_requests:sample_requests_list' %}">All Sample Requests</a>
+                </li>
+                <li class="nav_li">
+                    <a href="{% url 'sample_requests:sample_request_create' %}">Add New Sample Request</a>
+                </li>
+        </ul>
+    </nav>
+    {% endblock %}
+
+    {% block content %}
+        <h1>This is the HOME PAGE of the SAMPLE REQUESTS HOME from SAMPLE & QUALITY PLATFORM</h1>
+    {% endblock %}
+
+
+    </body>
+    </html>

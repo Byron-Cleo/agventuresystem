@@ -1,0 +1,25 @@
+    {% extends "./customers_home_page.html" %}
+
+
+    {% block app_navigation %}
+    <nav class="nav">
+        <ul class="nav_ul">
+                <li class="nav_li">
+                    <a href="{% url 'customers:customers_home' %}">BACK to CUSTOMER Home Page IN SALES PLATFORM</a>
+                </li>
+                <li class="nav_li">
+                    <a href="{% url 'customers:customers_list' %}">All AGV Customers</a>
+                </li>
+        </ul>
+    </nav>
+    {% endblock %}
+
+
+
+    {% block content %}
+    <h3>UPDATE Customer (CUSTOMER UPDATE PAGE)</h3>
+    <form action="" method="post"> {% csrf_token %}
+        {{ customer_update_form.as_p}}
+        <input type="submit" value="UPDATE CUSTOMER">
+    </form>
+    {% endblock %}

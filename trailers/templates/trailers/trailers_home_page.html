@@ -1,0 +1,35 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    {% block base_title %} <title>TRANS LOGI Trailers Home Page</title>{% endblock %}
+</head>
+<body>
+
+    {% block app_navigation %}
+    <nav class="nav">
+        <ul class="nav_ul">
+                <li class="nav_li">
+                    <a href="{% url 'transport_logistic' %}">BACK TRANSPORT & LOGISTICS</a>
+                </li>
+                <li class="nav_li">
+                    <a href="{% url 'trailers:trailer_list' %}">All Trailer</a>
+                </li>
+                <li class="nav_li">
+                    <a href="{% url 'trailers:trailer_create' %}">Add New Trailer</a>
+                </li>
+        </ul>
+    </nav>
+    {% endblock %}
+
+    {% block content %}
+        <h1>This is the HOME PAGE of the TRAILERS APP from TRANSPORT & LOGISTICS PLATFORM</h1>
+    <h3>gltrailer yoohhhh</h3>
+    {% endblock %}
+
+
+    </body>
+    </html>

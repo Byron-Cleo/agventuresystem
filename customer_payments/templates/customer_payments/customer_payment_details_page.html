@@ -1,0 +1,55 @@
+    {% extends "./customer_payments_home_page.html" %}
+
+
+    {% block app_navigation %}
+    <nav class="nav">
+        <ul class="nav_ul">
+                <li class="nav_li">
+                    <a href="{% url 'customer_payments:customer_payment_home' %}">BACK to Crop Stock Home Page</a>
+                </li>
+                <li class="nav_li">
+                    <a href="{% url 'customer_payments:customer_payments_list' %}">All Farms' Crop Stocks</a>
+                </li>
+        </ul>
+    </nav>
+    {% endblock %}
+
+
+
+    {% block content %}
+
+     <h3>All Customer Payment Details/(PROPERTIES/ATTRIBUTES OF THE Customer Payment cLASS)</h3>
+
+    User: {{ request.user }}
+
+<div style="width: 35rem;">
+
+    <div style="display: flex; background-color: greenyellow; margin-bottom: 2rem;">
+    <h3>Bank:</h3>
+    <p style="align-self: center; margin: 1rem;">{{ cust_payment_obj.bank_paid }}</p>
+    </div>
+
+    <div style="display: flex; background-color: greenyellow; margin-bottom: 2rem;">
+    <h3>Crop Variety:</h3>
+    <p style="align-self: center; margin: 1rem;">{{ cust_payment_obj.amount_payable }}</p>
+    </div>
+
+    <div style="display: flex; background-color: greenyellow;  margin-bottom: 2rem;">
+    <h3>Crop Grade:</h3>
+    <p style="align-self: center; margin: 1rem;">{{ cust_payment_obj.payment_status }}</p>
+    </div>
+
+    <div style="display: flex; background-color: greenyellow; margin-bottom: 2rem;">
+    <h3>Crop Added By:</h3>
+    <p style="align-self: center; margin: 1rem;">{{ cust_payment_obj.created_by }}</p>
+    </div>
+
+    <div style="display: flex; background-color: greenyellow; margin-bottom: 2rem;">
+    <h3>Crop Updated By:</h3>
+    <p style="align-self: center; margin: 1rem;">{{ cust_payment_obj.updated_by }}</p>
+    </div>
+
+    <div><a href="{% url 'customer_payments:customer_payment_update' cust_payment_obj.id %}">UPDATE CROP STOCK </a></div>
+</div>
+
+    {% endblock %}

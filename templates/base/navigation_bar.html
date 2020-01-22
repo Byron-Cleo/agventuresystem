@@ -1,0 +1,34 @@
+{% url 'agv_home' as home_url %}
+{% url 'user_management' as user_management_url %}
+{% url 'sample_quality' as sample_quality_url %}
+{% url 'sales_platform' as sales_platform_url %}
+{% url 'transport_logistic' as transport_logistics_url %}
+{% url 'farms_platform' as farms_platform_url %}
+{% url 'accounting_platform' as agv_accounting_platform_url %}
+
+<nav class="nav">
+    <h1>CURRENT LOGGED IN USER: {{ request.user.username }}</h1>
+        <ul class="nav_ul">
+                <li class="nav_li">
+                    <a href="{{ home_url }}">Home</a>
+                </li>
+                <li class="nav_li">
+                    <a href="{{ user_management_url }}">User Management</a>
+                </li>
+                <li class="nav_li">
+                    <a href="{{ sample_quality_url }}">Sampling & Quality Control</a>
+                </li>
+                <li class="nav_li">
+                    <a href="{{ sales_platform_url }}">Sales Platform</a>
+                </li>
+                <li class="nav_li">
+                    <a href="{{ transport_logistics_url }}">Transport & Logistics</a>
+                </li>
+                <li class="nav_li">
+                    <a href="{{ farms_platform_url }}">Farms Platform </a>
+                </li>
+                <li class="nav_li">
+                    <a href="{{ agv_accounting_platform_url }}">AGV Accounts Platform</a>
+                </li>
+        </ul>
+    </nav>

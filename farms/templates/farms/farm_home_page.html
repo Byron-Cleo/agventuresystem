@@ -1,0 +1,37 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    {% block base_title %} <title>Farm Home Page</title>{% endblock %}
+</head>
+<body>
+
+    {% block app_navigation %}
+    <nav class="nav">
+        <ul class="nav_ul">
+                <li class="nav_li">
+                    <a href="{% url 'sales_platform' %}">BACK SALES PLATFORM</a>
+                </li>
+                <li class="nav_li">
+                    <a href="{% url 'farms:farms_list' %}">All Farms</a>
+                </li>
+                <li class="nav_li">
+                    <a href="{% url 'farms:farm_create' %}">Create New Farm</a>
+                </li>
+        </ul>
+    </nav>
+    {% endblock %}
+
+    {% block content %}
+        <h1>FARMS C R U D from Sales Platform</h1> <br>
+
+    <h1>FARMS CRUD DONE in the SALES PLATFORM</h1>
+
+    {% endblock %}
+
+
+    </body>
+    </html>

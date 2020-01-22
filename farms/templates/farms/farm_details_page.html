@@ -1,0 +1,41 @@
+    <nav class="nav">
+        <ul class="nav_ul">
+                <li class="nav_li">
+                    <a href="{% url 'farms:farm_home' %}">Back to Farm Main Page IN SALES PLATFORM</a>
+                </li>
+                <li class="nav_li">
+                    <a href="{% url 'farms:farms_list' %}">All Farms</a>
+                </li>
+        </ul>
+    </nav>
+
+
+    <h3>All Farms Details To KNOW MORE ABOUT THE FARM</h3>
+
+    User: {{ request.user }}
+
+<div style="width: 35rem;">
+
+    <div style="display: flex; background-color: greenyellow; margin-bottom: 2rem;">
+    <h3>Name of the Farm:</h3>
+    <p style="align-self: center; margin: 1rem;">{{ farm.name }}</p>
+    </div>
+
+    <div style="display: flex; background-color: greenyellow; margin-bottom: 2rem;">
+    <h3>Short Name of the Farm:</h3>
+    <p style="align-self: center; margin: 1rem;">{{ farm.short_name }}</p>
+    </div>
+
+    <div style="display: flex; background-color: greenyellow; margin-bottom: 2rem;">
+    <h3>Added By:</h3>
+    <p style="align-self: center; margin: 1rem;">{{ farm.added_by.username }}</p>
+    </div>
+
+    <div style="display: flex; background-color: greenyellow; margin-bottom: 2rem;">
+    <h3>Updated By:</h3>
+    <p style="align-self: center; margin: 1rem;">{{ farm.updated_by.username }}</p>
+    </div>
+
+    <div><a href="{% url 'farms:farm_update' farm.id %}">UPDATE FARM</a></div>
+
+</div>

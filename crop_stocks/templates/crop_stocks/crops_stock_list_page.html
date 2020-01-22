@@ -1,0 +1,32 @@
+    {% extends "./crop_stocks_home_page.html" %}
+
+
+    {% block app_navigation %}
+    <nav class="nav">
+        <ul class="nav_ul">
+                <li class="nav_li">
+                    <a href="{% url 'crop_stocks:crop_stock_home' %}">BACK to Crop Stock Home Page(FOR FARMS)</a>
+                </li>
+        </ul>
+    </nav>
+    {% endblock %}
+
+
+
+    {% block content %}
+
+    <h3>All Farms Crop Stocks List</h3>
+
+    {% if crop_stocks %}
+    <ul style="width: 35rem;">
+        {% for crop_stock in crop_stocks %}
+        <li style="display: flex; background-color: greenyellow; margin-bottom: 2rem;">
+            <a style="margin: .5rem;" href="{{ crop_stock.get_absolute_url }}">{{ crop_stock.name }}</a>
+        </li>
+        {% endfor %}
+    </ul>
+    {% else %}
+    <h3>No Crop Stocks Posted Yet</h3>
+    {% endif %}
+
+    {% endblock %}

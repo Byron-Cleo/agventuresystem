@@ -1,0 +1,50 @@
+    {% extends "./transporters_home_page.html" %}
+
+
+    {% block app_navigation %}
+    <nav class="nav">
+        <ul class="nav_ul">
+                <li class="nav_li">
+                    <a href="{% url 'transporters:transporters_home' %}">BACK to Transporters Home Page</a>
+                </li>
+                <li class="nav_li">
+                    <a href="{% url 'transporters:transporter_list' %}">All Transporters</a>
+                </li>
+        </ul>
+    </nav>
+    {% endblock %}
+
+
+
+    {% block content %}
+
+     <h3>All Transporter Details/(PROPERTIES/ATTRIBUTES OF THE TRANSPORTER CLASS)</h3>
+
+    User: {{ request.user }}
+
+<div style="width: 35rem;">
+
+    <div style="display: flex; background-color: greenyellow; margin-bottom: 2rem;">
+    <h3>Name of the Crop:</h3>
+    <p style="align-self: center; margin: 1rem;">{{ transporter.name }}</p>
+    </div>
+
+    <div style="display: flex; background-color: greenyellow; margin-bottom: 2rem;">
+    <h3>Crop Variety:</h3>
+    <p style="align-self: center; margin: 1rem;">{{ transporter.contract_status }}</p>
+    </div>
+
+    <div style="display: flex; background-color: greenyellow; margin-bottom: 2rem;">
+    <h3>Crop Added By:</h3>
+    <p style="align-self: center; margin: 1rem;">{{ transporter.added_by }}</p>
+    </div>
+
+    <div style="display: flex; background-color: greenyellow; margin-bottom: 2rem;">
+    <h3>Crop Updated By:</h3>
+    <p style="align-self: center; margin: 1rem;">{{ transporter.updated_by }}</p>
+    </div>
+
+    <div><a href="{% url 'transporters:transporter_update' transporter.id %}">UPDATE TRANSPORTER </a></div>
+</div>
+
+    {% endblock %}

@@ -1,0 +1,25 @@
+    {% extends "./drivers_home_page.html" %}
+
+
+    {% block app_navigation %}
+    <nav class="nav">
+        <ul class="nav_ul">
+                <li class="nav_li">
+                    <a href="{% url 'drivers:drivers_home' %}">BACK to Driver Home Page</a>
+                </li>
+                <li class="nav_li">
+                    <a href="{% url 'drivers:driver_list' %}">All Drivers</a>
+                </li>
+        </ul>
+    </nav>
+    {% endblock %}
+
+
+
+    {% block content %}
+    <h3>UPDATE Driver (DRIVER UPDATE PAGE)</h3>
+    <form action="" method="post"> {% csrf_token %}
+        {{ driver_update_form.as_p}}
+        <input type="submit" value="UPDATE DRIVER">
+    </form>
+    {% endblock %}

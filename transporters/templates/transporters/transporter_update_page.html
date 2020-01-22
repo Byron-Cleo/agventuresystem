@@ -1,0 +1,25 @@
+    {% extends "./transporters_home_page.html" %}
+
+
+    {% block app_navigation %}
+    <nav class="nav">
+        <ul class="nav_ul">
+                <li class="nav_li">
+                    <a href="{% url 'transporters:transporters_home' %}">BACK to Transporters Page</a>
+                </li>
+                <li class="nav_li">
+                    <a href="{% url 'transporters:transporter_list' %}">All AGV Transporters</a>
+                </li>
+        </ul>
+    </nav>
+    {% endblock %}
+
+
+
+    {% block content %}
+    <h3>UPDATE Transporter (TRANSPORTER UPDATE PAGE)</h3>
+    <form action="" method="post"> {% csrf_token %}
+        {{ transporter_update_form.as_p}}
+        <input type="submit" value="UPDATE TRANSPORTER">
+    </form>
+    {% endblock %}

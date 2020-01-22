@@ -1,0 +1,32 @@
+    {% extends "./drivers_home_page.html" %}
+
+
+    {% block app_navigation %}
+    <nav class="nav">
+        <ul class="nav_ul">
+                <li class="nav_li">
+                    <a href="{% url 'drivers:drivers_home' %}">BACK to Drivers - Trans & LOGISTICS PLATFORM</a>
+                </li>
+        </ul>
+    </nav>
+    {% endblock %}
+
+
+
+    {% block content %}
+
+    <h3>All AGV Drivers</h3>
+
+    {% if drivers %}
+    <ul style="width: 35rem;">
+        {% for driver in drivers %}
+        <li style="display: flex; background-color: greenyellow; margin-bottom: 2rem;">
+            <a style="margin: .5rem;" href="{{ driver.get_absolute_url }}">{{ driver.full_name }}</a>
+        </li>
+        {% endfor %}
+    </ul>
+    {% else %}
+    <h3>No New Driver Added Yet</h3>
+    {% endif %}
+
+    {% endblock %}

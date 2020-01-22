@@ -1,0 +1,25 @@
+    {% extends "./customer_interests_home_page.html" %}
+
+
+    {% block app_navigation %}
+    <nav class="nav">
+        <ul class="nav_ul">
+                <li class="nav_li">
+                    <a href="{% url 'customer_interests:home_customer_interest' %}">BACK to Customer Interest Home Page</a>
+                </li>
+        </ul>
+    </nav>
+    {% endblock %}
+
+
+
+    {% block content %}
+
+    <h3>Add new Customer Interest (CUSTOMER INTEREST CREATE PAGE)</h3>
+
+    <form action="" method="post"> {% csrf_token %}
+        {{ customer_interest_create_form.as_p}}
+        <input type="submit" value="Raise Cust. Interest">
+    </form>
+
+    {% endblock %}

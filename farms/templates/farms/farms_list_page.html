@@ -1,0 +1,30 @@
+{% extends "./farm_home_page.html" %}
+
+    {% block farm_navigation %}
+        <nav class="nav">
+            <ul class="nav_ul">
+                    <li class="nav_li">
+                        <a href="{% url 'farms:farm_home' %}">BACK Farm Home Page</a>
+                    </li>
+            </ul>
+        </nav>
+    {% endblock %}
+
+
+    {% block content %}
+
+        <h2>All Farms Operating with Agventure Limited</h2>
+        {% if farms %}
+
+        <ul style="width: 35rem;">
+            {% for farm in farms %}
+            <li style="display: flex; background-color: greenyellow; margin-bottom: 2rem;">
+            <a style="margin: .5rem;" href="{{ farm.get_absolute_url }}">{{ farm.name }}</a>
+            </li>
+            {% endfor %}
+        </ul>
+        {% else %}
+        <h3> No FARMS ADDED YET!! Sales Please Add New Farm</h3>
+        {% endif %}
+
+    {% endblock %}

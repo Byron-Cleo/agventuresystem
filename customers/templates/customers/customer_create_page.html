@@ -1,0 +1,25 @@
+    {% extends "./customers_home_page.html" %}
+
+
+    {% block app_navigation %}
+    <nav class="nav">
+        <ul class="nav_ul">
+                <li class="nav_li">
+                    <a href="{% url 'customers:customers_home' %}">BACK to CUSTOMERS Home Page IN SALES PLATFORM</a>
+                </li>
+        </ul>
+    </nav>
+    {% endblock %}
+
+
+
+    {% block content %}
+
+    <h3>Add new AGV Customer (CROP STOCK CREATE PAGE)</h3>
+
+    <form action="" method="post"> {% csrf_token %}
+        {{ customer_create_form.as_p}}
+        <input type="submit" value="ADD NEW CUSTOMER">
+    </form>
+
+    {% endblock %}

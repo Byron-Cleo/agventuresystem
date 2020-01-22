@@ -1,0 +1,52 @@
+{% extends "base.html" %}
+
+{% block base_title %} <title>Sales Platform</title>{% endblock %}
+
+{% block content %}
+
+<h1>This is Sales Platform</h1>
+
+    <nav class="nav">
+        <ul class="nav_ul">
+                <li class="nav_li">
+                    <a href="{% url 'crop_stocks:crops_stock_list' %}">Crops Stock</a>
+                </li>
+                <li class="nav_li">
+                    <a href="{{ user_management_url }}">Sample Requests and Results</a>
+                </li>
+                <li class="nav_li">
+                    <a href="{% url 'customer_interests:home_customer_interest' %}">Customer Interest/Orders</a>
+                </li>
+                <li class="nav_li">
+                    <a href="{% url 'customer_contracts:home_customer_contact' %}">Customer Contracts</a>
+                </li>
+                <li class="nav_li">
+                    <a href="{% url 'farm_contracts:farm_contact_home' %}">Farm Contracts</a>
+                </li>
+                <li class="nav_li">
+                    <a href="{% url 'customer_payments:customer_payment_home' %}">Customer Payments</a>
+                </li>
+<!--                <li class="nav_li">-->
+<!--                    <a href="{{ agv_accounting_platform_url }}">Transport Contracts</a>-->
+<!--                </li>-->
+<!--                <li class="nav_li">-->
+<!--                    <a href="{{ agv_accounting_platform_url }}">Loading Orders</a>-->
+<!--                </li>-->
+<!--                 <li class="nav_li">-->
+<!--                    <a href="{% url 'farms:farm_home' %}">All AGV Farms</a>-->
+<!--                </li>-->
+<!--                <li class="nav_li">-->
+<!--                    <a href="{% url 'customers:customers_home' %}">All AGV Customers</a>-->
+<!--                </li>-->
+<!--                <li class="nav_li">-->
+<!--                    <a href="{{ agv_accounting_platform_url }}">All AGV Addresses</a>-->
+<!--                </li>-->
+        </ul>
+    </nav>
+
+
+{% endblock %}
+
+
+
+

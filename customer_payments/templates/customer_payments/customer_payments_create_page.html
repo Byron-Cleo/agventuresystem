@@ -1,0 +1,23 @@
+    {% extends "./customer_payments_home_page.html" %}
+
+
+    {% block app_navigation %}
+    <nav class="nav">
+        <ul class="nav_ul">
+                <li class="nav_li">
+                    <a href="{% url 'customer_payments:customer_payment_home' %}">BACK to Customer Payments Home Page</a>
+                </li>
+        </ul>
+    </nav>
+    {% endblock %}
+
+    {% block content %}
+
+    <h3>Add new Crop Stock (CUSTOMER PAYMENT CREATE PAGE)</h3>
+
+    <form action="" method="post"> {% csrf_token %}
+        {{ customer_pay_create_form.as_p}}
+        <input type="submit" value="ADD NEW CUSTOMER PAYMENT">
+    </form>
+
+    {% endblock %}

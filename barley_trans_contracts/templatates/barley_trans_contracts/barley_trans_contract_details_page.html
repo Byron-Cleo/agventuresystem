@@ -1,0 +1,55 @@
+    {% extends "./crop_stocks_home_page.html" %}
+
+
+    {% block app_navigation %}
+    <nav class="nav">
+        <ul class="nav_ul">
+                <li class="nav_li">
+                    <a href="{% url 'crop_stocks:crop_stock_home' %}">BACK to Crop Stock Home Page</a>
+                </li>
+                <li class="nav_li">
+                    <a href="{% url 'crop_stocks:crops_stock_list' %}">All Farms' Crop Stocks</a>
+                </li>
+        </ul>
+    </nav>
+    {% endblock %}
+
+
+
+    {% block content %}
+
+     <h3>All Crop Stock Details/(PROPERTIES/ATTRIBUTES OF THE cROPsTOCK cLASS)</h3>
+
+    User: {{ request.user }}
+
+<div style="width: 35rem;">
+
+    <div style="display: flex; background-color: greenyellow; margin-bottom: 2rem;">
+    <h3>Name of the Crop:</h3>
+    <p style="align-self: center; margin: 1rem;">{{ crop_stock.name }}</p>
+    </div>
+
+    <div style="display: flex; background-color: greenyellow; margin-bottom: 2rem;">
+    <h3>Crop Variety:</h3>
+    <p style="align-self: center; margin: 1rem;">{{ crop_stock.variety }}</p>
+    </div>
+
+    <div style="display: flex; background-color: greenyellow;  margin-bottom: 2rem;">
+    <h3>Crop Grade:</h3>
+    <p style="align-self: center; margin: 1rem;">{{ crop_stock.grade }}</p>
+    </div>
+
+    <div style="display: flex; background-color: greenyellow; margin-bottom: 2rem;">
+    <h3>Crop Added By:</h3>
+    <p style="align-self: center; margin: 1rem;">{{ crop_stock.added_by }}</p>
+    </div>
+
+    <div style="display: flex; background-color: greenyellow; margin-bottom: 2rem;">
+    <h3>Crop Updated By:</h3>
+    <p style="align-self: center; margin: 1rem;">{{ crop_stock.updated_by }}</p>
+    </div>
+
+    <div><a href="{% url 'crop_stocks:crop_stock_update' crop_stock.id %}">UPDATE CROP STOCK </a></div>
+</div>
+
+    {% endblock %}

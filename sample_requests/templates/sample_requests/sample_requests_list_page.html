@@ -1,0 +1,34 @@
+    {% extends "./sample_requests_home_page.html" %}
+
+
+{% block app_navigation %}
+    <nav class="nav">
+        <ul class="nav_ul">
+                <li class="nav_li">
+                    <a href="{% url 'sample_requests:sample_requests_home' %}">BACK to Sample Request HomePage</a>
+                </li>
+        </ul>
+    </nav>
+    {% endblock %}
+
+
+
+    {% block content %}
+
+    <h3>All Sample Requests</h3>
+
+    {% if sample_requests %}
+    <ul style="width: 35rem;">
+
+        {% for sample_request in sample_requests %}
+        <li style="display: flex; background-color: greenyellow; margin-bottom: 2rem;">
+            <a style="margin: .5rem;" href="{{ sample_request.get_absolute_url }}">{{ sample_request.crop_requested }}</a>
+        </li>
+        {% endfor %}
+
+    </ul>
+    {% else %}
+    <h3>No Sample Requests Yet</h3>
+    {% endif %}
+
+    {% endblock %}

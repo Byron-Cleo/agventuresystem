@@ -1,0 +1,25 @@
+    {% extends "./customer_contracts_home_page.html" %}
+
+
+    {% block app_navigation %}
+    <nav class="nav">
+        <ul class="nav_ul">
+                <li class="nav_li">
+                    <a href="{% url 'customer_contracts:home_customer_contact' %}">BACK to Customer Contract Home Page</a>
+                </li>
+                <li class="nav_li">
+                    <a href="{% url 'customer_contracts:customer_contracts_list' %}">All Customer Contracts</a>
+                </li>
+        </ul>
+    </nav>
+    {% endblock %}
+
+
+
+    {% block content %}
+    <h3>UPDATE Customer Contract(CUSTOMER CONTRACT UPDATE PAGE)</h3>
+    <form action="" method="post"> {% csrf_token %}
+        {{ customer_contract_update_form.as_p}}
+        <input type="submit" value="UPDATE CUSTOMER CONTRACT">
+    </form>
+    {% endblock %}

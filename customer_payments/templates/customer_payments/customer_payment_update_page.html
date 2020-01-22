@@ -1,0 +1,25 @@
+    {% extends "./customer_payments_home_page.html" %}
+
+
+    {% block app_navigation %}
+    <nav class="nav">
+        <ul class="nav_ul">
+                <li class="nav_li">
+                    <a href="{% url 'customer_payments:customer_payment_home' %}">BACK to Customer Payment Home Page</a>
+                </li>
+                <li class="nav_li">
+                    <a href="{% url 'customer_payments:customer_payments_list' %}">All Customer Payments</a>
+                </li>
+        </ul>
+    </nav>
+    {% endblock %}
+
+
+
+    {% block content %}
+    <h3>UPDATE Customer Payment (CUSTOMER PAYMENT UPDATE PAGE)</h3>
+    <form action="" method="post"> {% csrf_token %}
+        {{ customer_pay_update_form.as_p}}
+        <input type="submit" value="UPDATE Customer Payment">
+    </form>
+    {% endblock %}

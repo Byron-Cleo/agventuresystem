@@ -1,0 +1,144 @@
+    {% extends "./farm_contracts_home_page.html" %}
+
+
+    {% block app_navigation %}
+    <nav class="nav">
+        <ul class="nav_ul">
+                <li class="nav_li">
+                    <a href="{% url 'farm_contracts:farm_contact_home' %}">BACK to Farm Contracts Home Page</a>
+                </li>
+                <li class="nav_li">
+                    <a href="{% url 'farm_contracts:farm_contracts_list' %}">All Farm Contracts</a>
+                </li>
+        </ul>
+    </nav>
+    {% endblock %}
+
+
+    {% block content %}
+
+     <h3>All Farm Contract Details/(PROPERTIES/ATTRIBUTES OF THE Farm Contract CLASS)</h3>
+
+    User: {{ request.user }}
+
+<div style="width: 35rem;">
+
+    <div style="display: flex; background-color: greenyellow;  margin-bottom: 2rem;">
+    <h3>Farm/Seller:</h3>
+    <p style="align-self: center; margin: 1rem;">{{ farm_contract.seller }}</p>
+    </div>
+
+    <div style="display: flex; background-color: greenyellow; margin-bottom: 2rem;">
+    <h3>Ahventure Ltd./Buyer:</h3>
+    <p style="align-self: center; margin: 1rem;">{{ farm_contract.buyer }}</p>
+    </div>
+
+    <div style="display: flex; background-color: greenyellow; margin-bottom: 2rem;">
+    <h3>Contract Code:</h3>
+    <p style="align-self: center; margin: 1rem;">{{ farm_contract.cust_contract_code }}</p>
+    </div>
+
+    <div style="display: flex; background-color: greenyellow;  margin-bottom: 2rem;">
+    <h3>Contract Date:</h3>
+    <p style="align-self: center; margin: 1rem;">{{ farm_contract.created_date }}</p>
+    </div>
+
+    <div style="display: flex; background-color: greenyellow;  margin-bottom: 2rem;">
+    <h3>Customer Contract</h3>
+    <p style="align-self: center; margin: 1rem;">{{ farm_contract.customer_contract }}</p>
+    </div>
+
+    <div style="display: flex; background-color: greenyellow;  margin-bottom: 2rem;">
+    <h3>Tolerance +/-(%):</h3>
+    <p style="align-self: center; margin: 1rem;">{{ farm_contract.farm_tolerance }}</p>
+    </div>
+
+    <div style="display: flex; background-color: greenyellow;  margin-bottom: 2rem;">
+    <h3>Ordered Quantity:</h3>
+    <p style="align-self: center; margin: 1rem;">{{ farm_contract.ordered_quantity }}</p>
+    </div>
+
+    <div style="display: flex; background-color: greenyellow;  margin-bottom: 2rem;">
+    <h3>Bag Type:</h3>
+    <p style="align-self: center; margin: 1rem;">{{ farm_contract.bag_type }}</p>
+    </div>
+
+<!--    <div style="display: flex; background-color: greenyellow;  margin-bottom: 2rem;">-->
+<!--    <h3>Payment Terms</h3>-->
+<!--    <p style="align-self: center; margin: 1rem;">{{ farm_contract.customer }}</p>-->
+<!--    </div>-->
+
+<!--    <div style="display: flex; background-color: greenyellow;  margin-bottom: 2rem;">-->
+<!--    <h3>Cost/KG (KShs.)</h3>-->
+<!--    <p style="align-self: center; margin: 1rem;">{{ farm_contract.customer }}</p>-->
+<!--    </div>-->
+
+<!--    <div style="display: flex; background-color: greenyellow;  margin-bottom: 2rem;">-->
+<!--    <h3>Cost/Bag (KShs.)</h3>-->
+<!--    <p style="align-self: center; margin: 1rem;">{{ farm_contract.customer }}</p>-->
+<!--    </div>-->
+
+<!--    <div style="display: flex; background-color: greenyellow;  margin-bottom: 2rem;">-->
+<!--    <h3>Ordered Bag Type</h3>-->
+<!--    <p style="align-self: center; margin: 1rem;">{{ farm_contract.customer }}</p>-->
+<!--    </div>-->
+
+<!--    <div style="display: flex; background-color: greenyellow;  margin-bottom: 2rem;">-->
+<!--    <h3>Cost/Unit (KShs.)</h3>-->
+<!--    <p style="align-self: center; margin: 1rem;">{{ farm_contract.customer }}</p>-->
+<!--    </div>-->
+
+    <div style="display: flex; background-color: greenyellow;  margin-bottom: 2rem;">
+    <h3>Quality Specifications</h3>
+    <p style="align-self: center; margin: 1rem;">{{ farm_contract.quality_specs }}</p>
+    </div>
+
+    <div style="display: flex; background-color: greenyellow;  margin-bottom: 2rem;">
+    <h3>Rejection Procedure</h3>
+    <p style="align-self: center; margin: 1rem;">{{ farm_contract.rejection_procedure }}</p>
+    </div>
+
+    <div style="display: flex; background-color: greenyellow;  margin-bottom: 2rem;">
+    <h3>Delivery Terms</h3>
+    <p style="align-self: center; margin: 1rem;">{{ farm_contract.delivery_terms }}</p>
+    </div>
+
+    <div style="display: flex; background-color: greenyellow;  margin-bottom: 2rem;">
+    <h3>Delivery Period</h3>
+    <p style="align-self: center; margin: 1rem;">{{ farm_contract.delivery_period }}</p>
+    </div>
+
+    <div style="display: flex; background-color: greenyellow;  margin-bottom: 2rem;">
+    <h3>Offloading Fees</h3>
+    <p style="align-self: center; margin: 1rem;">{{ farm_contract.offloading_fees }}</p>
+    </div>
+
+    <div style="display: flex; background-color: greenyellow;  margin-bottom: 2rem;">
+    <h3>Other Conditions</h3>
+    <p style="align-self: center; margin: 1rem;">{{ farm_contract.other_conditions }}</p>
+    </div>
+
+    <div style="display: flex; background-color: greenyellow;  margin-bottom: 2rem;">
+    <h3>Governing Terms</h3>
+    <p style="align-self: center; margin: 1rem;">{{ farm_contract.governing_terms }}</p>
+    </div>
+
+    <div style="display: flex; background-color: greenyellow;  margin-bottom: 2rem;">
+    <h3>Whole Agreement</h3>
+    <p style="align-self: center; margin: 1rem;">{{ farm_contract.whole_agreement }}</p>
+    </div>
+
+    <div style="display: flex; background-color: greenyellow; margin-bottom: 2rem;">
+    <h3>Customer Contract Added By:</h3>
+    <p style="align-self: center; margin: 1rem;">{{ farm_contract.created_by }}</p>
+    </div>
+
+    <div style="display: flex; background-color: greenyellow; margin-bottom: 2rem;">
+    <h3>Customer Contract Updated By:</h3>
+    <p style="align-self: center; margin: 1rem;">{{ farm_contract.updated_by }}</p>
+    </div>
+
+    <div><a href="{% url 'farm_contracts:farm_contract_update' farm_contract.id %}">UPDATE FARM CONTRACT </a></div>
+</div>
+
+    {% endblock %}

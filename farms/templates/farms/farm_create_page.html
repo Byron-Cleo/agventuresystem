@@ -1,0 +1,21 @@
+    {% extends "./farm_home_page.html" %}
+
+
+    {% block app_navigation %}
+    <nav class="nav">
+        <ul class="nav_ul">
+                <li class="nav_li">
+                    <a href="{% url 'farms:farm_home' %}">BACK Farm Home Page</a>
+                </li>
+        </ul>
+    </nav>
+    {% endblock %}
+
+
+
+    {% block content %}
+    <form action="" method="post"> {% csrf_token %}
+        {{ form.as_p}}
+        <input type="submit" value="SAVE FARM">
+    </form>
+    {% endblock %}

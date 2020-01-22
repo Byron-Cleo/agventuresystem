@@ -1,0 +1,26 @@
+{% extends "base.html" %}
+
+{% block base_title %} <title> Sample & Quality </title>{% endblock %}
+
+{% block content %}
+
+<h1>This is Sample & Quality Platform</h1>
+
+<nav class="nav">
+        <ul class="nav_ul">
+                <li class="nav_li">
+                    <a href="{% url 'crop_stocks:crops_stock_list' %}">Crops Stock</a>
+                </li>
+                <li class="nav_li">
+                    <a href="{% url 'sample_requests:sample_requests_home' %}">Sample Requests</a>
+                </li>
+                <li class="nav_li">
+                    <a href="{% url 'sample_requests:sample_requests_home' %}">(TO BE COMPLETED) Sample Results</a>
+                </li>
+        </ul>
+    </nav>
+
+{% endblock %}
+
+
+

@@ -1,0 +1,25 @@
+    {% extends "./farm_contracts_home_page.html" %}
+
+
+    {% block app_navigation %}
+    <nav class="nav">
+        <ul class="nav_ul">
+                <li class="nav_li">
+                    <a href="{% url 'farm_contracts:farm_contact_home' %}">BACK to Farm Contract Home Page</a>
+                </li>
+        </ul>
+    </nav>
+    {% endblock %}
+
+
+
+    {% block content %}
+
+    <h3>Add new Farm Contract (FARM CONTRACT CREATE PAGE)</h3>
+
+    <form action="" method="post"> {% csrf_token %}
+        {{ farm_contract_create_form.as_p}}
+        <input type="submit" value="Gen Farm Contract">
+    </form>
+
+    {% endblock %}

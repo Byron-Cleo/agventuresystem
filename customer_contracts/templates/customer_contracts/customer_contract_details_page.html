@@ -1,0 +1,140 @@
+    {% extends "./customer_contracts_home_page.html" %}
+
+
+    {% block app_navigation %}
+    <nav class="nav">
+        <ul class="nav_ul">
+                <li class="nav_li">
+                    <a href="{% url 'customer_contracts:home_customer_contact' %}">BACK to Customer Contracts Home Page</a>
+                </li>
+                <li class="nav_li">
+                    <a href="{% url 'customer_contracts:customer_contracts_list' %}">All Customer Contracts</a>
+                </li>
+        </ul>
+    </nav>
+    {% endblock %}
+
+
+
+    {% block content %}
+
+     <h3>All Customer cONTRACT Details/(PROPERTIES/ATTRIBUTES OF THE Customer Interests cLASS)</h3>
+
+    User: {{ request.user }}
+
+<div style="width: 35rem;">
+
+    <div style="display: flex; background-color: greenyellow;  margin-bottom: 2rem;">
+    <h3>Agventure Ltd/Seller:</h3>
+    <p style="align-self: center; margin: 1rem;">{{ customer_contract.seller }}</p>
+    </div>
+
+    <div style="display: flex; background-color: greenyellow; margin-bottom: 2rem;">
+    <h3>Contract Customer:</h3>
+    <p style="align-self: center; margin: 1rem;">{{ customer_contract.customer }}</p>
+    </div>
+
+    <div style="display: flex; background-color: greenyellow; margin-bottom: 2rem;">
+    <h3>Contract Code:</h3>
+    <p style="align-self: center; margin: 1rem;">{{ customer_contract.cust_contract_code }}</p>
+    </div>
+
+    <div style="display: flex; background-color: greenyellow;  margin-bottom: 2rem;">
+    <h3>Contract Date:</h3>
+    <p style="align-self: center; margin: 1rem;">{{ customer_contract.created_date }}</p>
+    </div>
+
+    <div style="display: flex; background-color: greenyellow;  margin-bottom: 2rem;">
+    <h3>Interest/Ordered Quantity (KGs)</h3>
+    <p style="align-self: center; margin: 1rem;">{{ customer_contract.agv_kg_price }}</p>
+    </div>
+
+    <div style="display: flex; background-color: greenyellow;  margin-bottom: 2rem;">
+    <h3>Tolerance +/-(%):</h3>
+    <p style="align-self: center; margin: 1rem;">{{ customer_contract.cust_tolerance }}</p>
+    </div>
+
+<!--    <div style="display: flex; background-color: greenyellow;  margin-bottom: 2rem;">-->
+<!--    <h3>Bulk or Bags:</h3>-->
+<!--    <p style="align-self: center; margin: 1rem;">{{ customer_contract.customer }}</p>-->
+<!--    </div>-->
+
+<!--    <div style="display: flex; background-color: greenyellow;  margin-bottom: 2rem;">-->
+<!--    <h3>Payment Terms</h3>-->
+<!--    <p style="align-self: center; margin: 1rem;">{{ customer_contract.customer }}</p>-->
+<!--    </div>-->
+
+<!--    <div style="display: flex; background-color: greenyellow;  margin-bottom: 2rem;">-->
+<!--    <h3>Cost/KG (KShs.)</h3>-->
+<!--    <p style="align-self: center; margin: 1rem;">{{ customer_contract.customer }}</p>-->
+<!--    </div>-->
+
+<!--    <div style="display: flex; background-color: greenyellow;  margin-bottom: 2rem;">-->
+<!--    <h3>Cost/Bag (KShs.)</h3>-->
+<!--    <p style="align-self: center; margin: 1rem;">{{ customer_contract.customer }}</p>-->
+<!--    </div>-->
+
+<!--    <div style="display: flex; background-color: greenyellow;  margin-bottom: 2rem;">-->
+<!--    <h3>Ordered Bag Type</h3>-->
+<!--    <p style="align-self: center; margin: 1rem;">{{ customer_contract.customer }}</p>-->
+<!--    </div>-->
+
+<!--    <div style="display: flex; background-color: greenyellow;  margin-bottom: 2rem;">-->
+<!--    <h3>Cost/Unit (KShs.)</h3>-->
+<!--    <p style="align-self: center; margin: 1rem;">{{ customer_contract.customer }}</p>-->
+<!--    </div>-->
+
+    <div style="display: flex; background-color: greenyellow;  margin-bottom: 2rem;">
+    <h3>Quality Specifications</h3>
+    <p style="align-self: center; margin: 1rem;">{{ customer_contract.quality_specs }}</p>
+    </div>
+
+    <div style="display: flex; background-color: greenyellow;  margin-bottom: 2rem;">
+    <h3>Rejection Procedure</h3>
+    <p style="align-self: center; margin: 1rem;">{{ customer_contract.rejection_procedure }}</p>
+    </div>
+
+    <div style="display: flex; background-color: greenyellow;  margin-bottom: 2rem;">
+    <h3>Delivery Terms</h3>
+    <p style="align-self: center; margin: 1rem;">{{ customer_contract.delivery_terms }}</p>
+    </div>
+
+    <div style="display: flex; background-color: greenyellow;  margin-bottom: 2rem;">
+    <h3>Delivery Period</h3>
+    <p style="align-self: center; margin: 1rem;">{{ customer_contract.delivery_period }}</p>
+    </div>
+
+    <div style="display: flex; background-color: greenyellow;  margin-bottom: 2rem;">
+    <h3>Offloading Fees</h3>
+    <p style="align-self: center; margin: 1rem;">{{ customer_contract.offloading_fees }}</p>
+    </div>
+
+    <div style="display: flex; background-color: greenyellow;  margin-bottom: 2rem;">
+    <h3>Other Conditions</h3>
+    <p style="align-self: center; margin: 1rem;">{{ customer_contract.other_conditions }}</p>
+    </div>
+
+    <div style="display: flex; background-color: greenyellow;  margin-bottom: 2rem;">
+    <h3>Governing Terms</h3>
+    <p style="align-self: center; margin: 1rem;">{{ customer_contract.governing_terms }}</p>
+    </div>
+
+    <div style="display: flex; background-color: greenyellow;  margin-bottom: 2rem;">
+    <h3>Whole Agreement</h3>
+    <p style="align-self: center; margin: 1rem;">{{ customer_contract.whole_agreement }}</p>
+    </div>
+
+    <div style="display: flex; background-color: greenyellow; margin-bottom: 2rem;">
+    <h3>Customer Contract Added By:</h3>
+    <p style="align-self: center; margin: 1rem;">{{ customer_contract.created_by }}</p>
+    </div>
+
+    <div style="display: flex; background-color: greenyellow; margin-bottom: 2rem;">
+    <h3>Customer Contract Updated By:</h3>
+    <p style="align-self: center; margin: 1rem;">{{ customer_contract.updated_by }}</p>
+    </div>
+
+    <div><a href="{% url 'customer_contracts:customer_contract_update' customer_contract.id %}">UPDATE CUSTOMER CONTRACT </a></div>
+</div>
+
+    {% endblock %}

@@ -1,0 +1,60 @@
+    {% extends "./trailers_home_page.html" %}
+
+
+    {% block app_navigation %}
+    <nav class="nav">
+        <ul class="nav_ul">
+                <li class="nav_li">
+                    <a href="{% url 'trailers:trailers_home' %}">BACK to Trailer Home Page</a>
+                </li>
+                <li class="nav_li">
+                    <a href="{% url 'trailers:trailer_list' %}">All Trailers</a>
+                </li>
+        </ul>
+    </nav>
+    {% endblock %}
+
+
+
+    {% block content %}
+
+     <h3>All Trailer Details/(PROPERTIES/ATTRIBUTES OF THE TRAILER CLASS)</h3>
+
+    User: {{ request.user }}
+
+<div style="width: 35rem;">
+
+    <div style="display: flex; background-color: greenyellow; margin-bottom: 2rem;">
+    <h3>Trailer Transporter:</h3>
+    <p style="align-self: center; margin: 1rem;">{{ trailer.transporter }}</p>
+    </div>
+
+    <div style="display: flex; background-color: greenyellow; margin-bottom: 2rem;">
+    <h3>Trailer Reg. Number:</h3>
+    <p style="align-self: center; margin: 1rem;">{{ trailer.reg_number }}</p>
+    </div>
+
+    <div style="display: flex; background-color: greenyellow; margin-bottom: 2rem;">
+    <h3>Trailer Chassis Number:</h3>
+    <p style="align-self: center; margin: 1rem;">{{ trailer.chassis_number }}</p>
+    </div>
+
+    <div style="display: flex; background-color: greenyellow; margin-bottom: 2rem;">
+    <h3> Trailer Color:</h3>
+    <p style="align-self: center; margin: 1rem;">{{ trailer.color }}</p>
+    </div>
+
+    <div style="display: flex; background-color: greenyellow; margin-bottom: 2rem;">
+    <h3>Trailer Added By:</h3>
+    <p style="align-self: center; margin: 1rem;">{{ trailer.created_by }}</p>
+    </div>
+
+    <div style="display: flex; background-color: greenyellow; margin-bottom: 2rem;">
+    <h3>Trailer Updated By:</h3>
+    <p style="align-self: center; margin: 1rem;">{{ trailer.updated_by }}</p>
+    </div>
+
+    <div><a href="{% url 'trailers:trailer_update' trailer.id %}">UPDATE TRAILER</a></div>
+</div>
+
+    {% endblock %}

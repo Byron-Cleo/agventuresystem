@@ -1,0 +1,25 @@
+    {% extends "./trailers_home_page.html" %}
+
+
+    {% block app_navigation %}
+    <nav class="nav">
+        <ul class="nav_ul">
+                <li class="nav_li">
+                    <a href="{% url 'trailers:trailers_home' %}">BACK to Trailers Page</a>
+                </li>
+                <li class="nav_li">
+                    <a href="{% url 'trailers:trailer_list' %}">All AGV Trailer</a>
+                </li>
+        </ul>
+    </nav>
+    {% endblock %}
+
+
+
+    {% block content %}
+    <h3>UPDATE Trailer (TRAILER UPDATE PAGE)</h3>
+    <form action="" method="post"> {% csrf_token %}
+        {{ trailer_update_form.as_p}}
+        <input type="submit" value="UPDATE TRAILER">
+    </form>
+    {% endblock %}

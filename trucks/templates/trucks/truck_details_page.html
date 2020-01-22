@@ -1,0 +1,70 @@
+    {% extends "./trucks_home_page.html" %}
+
+
+    {% block app_navigation %}
+    <nav class="nav">
+        <ul class="nav_ul">
+                <li class="nav_li">
+                    <a href="{% url 'trucks:trucks_home' %}">BACK to Trucks Home Page</a>
+                </li>
+                <li class="nav_li">
+                    <a href="{% url 'trucks:truck_list' %}">All Trucks</a>
+                </li>
+        </ul>
+    </nav>
+    {% endblock %}\
+
+
+
+    {% block content %}
+
+     <h3>All Trailer Details/(PROPERTIES/ATTRIBUTES OF THE TRAILER CLASS)</h3>
+
+    User: {{ request.user }}
+
+<div style="width: 35rem;">
+
+    <div style="display: flex; background-color: greenyellow; margin-bottom: 2rem;">
+    <h3>Truck Transporter:</h3>
+    <p style="align-self: center; margin: 1rem;">{{ truck.transporter }}</p>
+    </div>
+
+    <div style="display: flex; background-color: greenyellow; margin-bottom: 2rem;">
+    <h3>Truck Max Weight:</h3>
+    <p style="align-self: center; margin: 1rem;">{{ truck.max_weight }}</p>
+    </div>
+
+    <div style="display: flex; background-color: greenyellow; margin-bottom: 2rem;">
+    <h3>Truck Type:</h3>
+    <p style="align-self: center; margin: 1rem;">{{ truck.truck_type }}</p>
+    </div>
+
+    <div style="display: flex; background-color: greenyellow; margin-bottom: 2rem;">
+    <h3> Truck Reg. Number:</h3>
+    <p style="align-self: center; margin: 1rem;">{{ truck.reg_number }}</p>
+    </div>
+
+    <div style="display: flex; background-color: greenyellow; margin-bottom: 2rem;">
+    <h3> Truck Chassis Number:</h3>
+    <p style="align-self: center; margin: 1rem;">{{ truck.chassis_number }}</p>
+    </div>
+
+    <div style="display: flex; background-color: greenyellow; margin-bottom: 2rem;">
+    <h3> Truck Color:</h3>
+    <p style="align-self: center; margin: 1rem;">{{ truck.color }}</p>
+    </div>
+
+    <div style="display: flex; background-color: greenyellow; margin-bottom: 2rem;">
+    <h3>Truck Added By:</h3>
+    <p style="align-self: center; margin: 1rem;">{{ truck.created_by }}</p>
+    </div>
+
+    <div style="display: flex; background-color: greenyellow; margin-bottom: 2rem;">
+    <h3>Truck Updated By:</h3>
+    <p style="align-self: center; margin: 1rem;">{{ truck.updated_by }}</p>
+    </div>
+
+    <div><a href="{% url 'trucks:truck_update' truck.id %}">UPDATE TRUCK</a></div>
+</div>
+
+    {% endblock %}
