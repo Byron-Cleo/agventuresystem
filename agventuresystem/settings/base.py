@@ -18,7 +18,7 @@ BASE_DIR = os.path.dirname(os.path.dirname(os.path.dirname(os.path.abspath(__fil
 
 
 # Quick-start development settings - unsuitable for production
-# See https://docs.djangoproject.com/en/2.2/howto/deployment/checklist/
+# See https://docs.djangoproject.co  m/en/2.2/howto/deployment/checklist/
 
 # SECURITY WARNING: keep the secret key used in production secret!
 SECRET_KEY = '@g8y&&0xv2s9)p9m(2vfg4#eerh@0wr)0bv#(86)i79mik!(=u'
@@ -28,9 +28,9 @@ SECRET_KEY = '@g8y&&0xv2s9)p9m(2vfg4#eerh@0wr)0bv#(86)i79mik!(=u'
 #
 # ALLOWED_HOSTS = ['127.0.0.1:8000']
 
-DEBUG = True
+DEBUG = False
 
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = ['.heroku.com']
 
 
 # Application definition
