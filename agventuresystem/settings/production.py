@@ -30,7 +30,7 @@ SECRET_KEY = '@g8y&&0xv2s9)p9m(2vfg4#eerh@0wr)0bv#(86)i79mik!(=u'
 
 DEBUG = False
 
-ALLOWED_HOSTS = ['.heroku.com']
+ALLOWED_HOSTS = ['agventuresystem.herokuapp.com', '.heroku.com']
 
 
 # Application definition
